@@ -14,12 +14,12 @@ export default function authLayout({ children }: { children: ReactNode }) {
         fill
       />
       <Image
-      src={logo}
-      alt="Logo"
-      width={120}
-      height={120}
-      className="absolute left-4 top-4 object-contain md:left-10 md:top-6"
-      priority
+        src={logo}
+        alt="Logo"
+        width={120}
+        height={120}
+        className="absolute left-4 top-4 object-contain md:left-10 md:top-6"
+        priority
       />
       {children}
     </div>

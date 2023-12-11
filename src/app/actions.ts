@@ -2,8 +2,8 @@
 
 import { getServerSession } from "next-auth"
 import { authOptions } from "./utils/auth"
-import prisma from "./utils/db"
 import { revalidatePath } from "next/cache"
+import prisma from "./utils/db"
 
 export async function addToWatchlist(formData: FormData) {
     "use server"

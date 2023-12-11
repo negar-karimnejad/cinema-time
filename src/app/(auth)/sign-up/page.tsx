@@ -1,13 +1,10 @@
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { GithubIcon } from "lucide-react";
-import Link from "next/link";
-import GoogleIcon from "../../../../public/google.svg";
-import Image from "next/image";
 import GithubSignInButton from "@/app/components/GithubSignInButton";
 import GoogleSignInButton from "@/app/components/GoogleSignInButton";
-import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/utils/auth";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { getServerSession } from "next-auth";
+import Link from "next/link";
 import { redirect } from "next/navigation";
 
 export default async function SignUp() {

@@ -2,10 +2,10 @@
 
 import { Button } from "@/components/ui/button";
 import { Heart, PlayCircle } from "lucide-react";
-import PlayVideoModal from "./PlayVideoModal";
 import { useState } from "react";
 import { addToWatchlist, deleteFromWatchlist } from "../actions";
 import { usePathname } from "next/navigation";
+import PlayVideoModal from "./PlayVideoModal";
 
 interface iAppProps {
   movieId: number;
