@@ -31,7 +31,7 @@ export default function MovieCard({
   const [open, setOpen] = useState(false);
   return (
     <>
-      <button className="-mt-14" onClick={() => setOpen(!open)}>
+      <button className="-mt-14" onClick={() => setOpen(true)}>
         <PlayCircle className="h-20 w-20" />
       </button>
       <div className="top-5 right-5 absolute z-10">

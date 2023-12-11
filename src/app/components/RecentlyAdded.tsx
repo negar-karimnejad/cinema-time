@@ -55,6 +55,7 @@ export default async function RecentlyAdded() {
                 release={movie.release}
                 age={movie.age}
                 duration={movie.duration}
+                key={movie.id}
               />
             </div>
           </div>
