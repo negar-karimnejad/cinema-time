@@ -76,7 +76,7 @@ async function getData(category: string, userId: string) {
       return data;
     }
     default: {
-      throw new Error();
+      throw new Error("There is no item for this category.");
     }
   }
 }
