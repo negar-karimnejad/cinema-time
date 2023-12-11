@@ -1,7 +1,7 @@
-import MovieCard from "@/app/components/MovieCard";
 import { authOptions } from "@/app/utils/auth";
-import prisma from "@/app/utils/db";
 import { getServerSession } from "next-auth";
+import MovieCard from "@/app/components/MovieCard";
+import prisma from "@/app/utils/db";
 import Image from "next/image";
 
 async function getData(userId: string) {
