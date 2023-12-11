@@ -28,10 +28,10 @@ export default function MovieCard({
   duration,
   release,
 }: iAppProps) {
-  const [isPlayVideoModal, setIsPlayVideoModal] = useState(false);
+  const [open, setOpen] = useState(false);
   return (
     <>
-      <button className="-mt-14" onClick={() => setIsPlayVideoModal(true)}>
+      <button className="-mt-14" onClick={() => setOpen(!open)}>
         <PlayCircle className="h-20 w-20" />
       </button>
       <div className="top-5 right-5 absolute z-10">
@@ -62,16 +62,17 @@ export default function MovieCard({
           {overview}
         </p>
       </div>
-      {isPlayVideoModal && (
-        <PlayVideoModal
-          title={title}
-          overview={overview}
-          release={release}
-          age={age}
-          duration={duration}
-          youtubeUrl={youtubeUrl}
-        />
-      )}
+      <PlayVideoModal
+        youtubeUrl={youtubeUrl}
+        key={movieId}
+        title={title}
+        overview={overview}
+        state={open}
+        changeState={setOpen}
+        age={age}
+        duration={duration}
+        release={release}
+      />
     </>
   );
 }

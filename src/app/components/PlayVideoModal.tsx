@@ -1,30 +1,48 @@
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
+
 interface iAppProps {
-  overview: string;
   title: string;
+  overview: string;
   youtubeUrl: string;
+  state: boolean;
+  changeState: any;
+  release: number;
   age: number;
   duration: number;
-  release: number;
 }
 
 export default function PlayVideoModal({
-  title,
+  changeState,
   overview,
-  release,
+  state,
+  title,
+  youtubeUrl,
   age,
   duration,
-  youtubeUrl,
+  release,
 }: iAppProps) {
   return (
-    <div className="w-full h-full">
-      <p>{title}</p>
-      <p className="line-clamp-3">{overview}</p>
-      <p className="font-normal text-sm">{release}</p>
-      <p className="font-normal border py-0.5 px-1 border-gray-200 rounded text-sm">
-        {age}+
-      </p>
-      <p className="font-normal text-sm">{duration}h</p>
-      <video src={youtubeUrl}></video>
-    </div>
+    <Dialog open={state} onOpenChange={() => changeState(!state)}>
+      <DialogContent className="sm:max-w-[425px]">
+        <DialogHeader>
+          <DialogTitle>{title}</DialogTitle>
+          <DialogDescription className="line-clamp-3">
+            {overview}
+          </DialogDescription>
+          <div className="flex gap-x-2 items-center">
+            <p>{release}</p>
+            <p className="border py-o.5 px-1 border-gray-200 rounded">{age}+</p>
+            <p>{duration}h</p>
+          </div>
+        </DialogHeader>
+        <iframe src={youtubeUrl} height={250} className="w-full" />
+      </DialogContent>
+    </Dialog>
   );
 }
