@@ -6,6 +6,7 @@ import Navbar from "../components/Navbar";
 
 export default function homeLayout({ children }: { children: ReactNode }) {
   const session = getServerSession(authOptions);
+
   if (!session) {
     return redirect("/login");
   }

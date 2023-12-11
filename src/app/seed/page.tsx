@@ -22,12 +22,12 @@ export default function SeedDatabase() {
           youtubeString: "https://www.youtube.com/embed/GVPzGBvPrzw",
         },
         {
+          id: 1,
           imageString:
             "https://image.tmdb.org/t/p/original/kHlX3oqdD4VGaLpB8O78M25KfdS.jpg",
           title: "A Haunting in Venice",
           age: 12,
           duration: 1.44,
-          id: 1,
           overview:
             "Celebrated sleuth Hercule Poirot, now retired and living in self-imposed exile in Venice, reluctantly attends a Halloween séance at a decaying, haunted palazzo. When one of the guests is murdered, the detective is thrust into a sinister world of shadows and secrets.",
           release: 2023,
