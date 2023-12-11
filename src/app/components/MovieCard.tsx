@@ -49,7 +49,7 @@ export default function MovieCard({
           </form>
         ) : (
           <form action={addToWatchlist}>
-            <input type="hidden" name="watchListId" value={movieId} />
+            <input type="hidden" name="movieId" value={movieId} />
             <input type="hidden" name="pathname" value={pathname} />
             <Button variant={"outline"} size={"icon"}>
               <Heart className="w-4 h-4" />
